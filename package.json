@@ -1,0 +1,28 @@
+{
+  "name": "easiest-nodejs-routing",
+  "version": "1.0.0",
+  "description": "Simple router for node.js without using any dependencies like Express JS, etc,.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/essamamdani/nodejs-router.git"
+  },
+  "keywords": [
+    "nodejs",
+    "routing",
+    "node",
+    "route",
+    "nonexpress",
+    "noexpress"
+  ],
+  "author": "Essa Mamdani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/essamamdani/nodejs-router/issues"
+  },
+  "homepage": "https://github.com/essamamdani/nodejs-router#readme"
+}
