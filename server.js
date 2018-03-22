@@ -1,24 +1,20 @@
-var http = require("http");
-var customRoute = require("./routes");
-const port = 9999;
-
+const Routes = require("./routes");
 
 // Create Routes here.
-
-customRoute.route.for("get", "/", function (request, response) {
+Routes.set("get", "/", function (request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.write("Custom Routing");
     response.end();
 });
 
-customRoute.route.for("get", "/hello", function (request, response) {
+Routes.set("get", "/hello", function (request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.write("Hello World");
     response.end();
 });
 
-customRoute.route.for("post", "/post", function (request, response) {
-    var incoming = "";
+Routes.set("post", "/post", function (request, response) {
+    let incoming = "";
     request.on('data', function (chunk) {
         incoming += chunk.toString();
     });
@@ -30,6 +26,5 @@ customRoute.route.for("post", "/post", function (request, response) {
 });
 
 //Start Server
-http.createServer(customRoute.onRequest).listen(port);
-
-console.log("Server has started. Listing port " + port);
+Routes.serverListen(9999);
+console.log("Server has started. Listing port " + 9999);
